@@ -16,16 +16,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let aberCSBuilding = MapNode(latitude: 52.415904, longitude: -4.0650508, title: "Computer Science Building", subtitle: "Computer Science Building on the Aberystwyth University Campus")
+        let CSDept = MapNode(latitude: 52.415904, longitude: -4.0650508, title: "Computer Science Building", subtitle: "Department of Computer Science")
         // Sets a coordinate region with the Computer Science building as the centre and a 250m span.
         let regionSpan: CLLocationDistance = 250
         let coordinateRegion = MKCoordinateRegion(
-             center: aberCSBuilding.coordinate,
+             center: CSDept.coordinate,
              latitudinalMeters: regionSpan,
              longitudinalMeters: regionSpan)
        mapView.setRegion(coordinateRegion, animated: true)
-       mapView.addAnnotation(aberCSBuilding)
-        // Asks for user location permission. 2m accuracy and shows the users location.
+       mapView.addAnnotation(CSDept)
+        // Asks for user location permission. 10m accuracy and shows the users location.
         locationManager.requestWhenInUseAuthorization()
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
