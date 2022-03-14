@@ -7,12 +7,14 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
 
-    let CSDept = MapNode(latitude: 52.415904, longitude: -4.0650508, title: "Computer Science Building", subtitle: "Department of Computer Science")
+    let CSDept = MapNode(latitude: 52.415904, longitude: -4.0650508, title: "Computer Science Building",
+                         subtitle: "Department of Computer Science")
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -32,15 +34,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Asks for user location permission. 10m accuracy and shows the users location.
         locationManager.requestWhenInUseAuthorization()
         locationManager.distanceFilter = kCLDistanceFilterNone
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self
         locationManager.startUpdatingLocation()
         mapView.showsUserLocation = true
-        
+
         mapState.text = "State: Unknown"
     }
     
     func locationManager(_ manager: CLLocationManager,  didUpdateLocations locations: [CLLocation]) {
-
         // Do something with the location.
         let csLocation = CLLocation(latitude: CSDept.coordinate.latitude, longitude: CSDept.coordinate.longitude)
         let distance = csLocation.distance(from: manager.location!)
