@@ -13,7 +13,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
 
-    let CSDept = MapNode(latitude: 52.415904, longitude: -4.0650508, title: "Computer Science Building",
+    let CSDept = MapNode(latitude: 52.416278, longitude: -4.065484, title: "Computer Science Building",
                          subtitle: "Department of Computer Science")
     
     @IBOutlet weak var mapView: MKMapView!
