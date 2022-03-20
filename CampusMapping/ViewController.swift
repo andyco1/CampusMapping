@@ -22,7 +22,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Sets a coordinate region with the Computer Science building as the centre and a 250m span.
+        // Sets a coordinate region with the Computer Science building as the centre and a 500m span.
         let regionSpan: CLLocationDistance = 500
         let coordinateRegion = MKCoordinateRegion(
              center: CSDept.coordinate,
@@ -46,7 +46,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Do something with the location.
         let csLocation = CLLocation(latitude: CSDept.coordinate.latitude, longitude: CSDept.coordinate.longitude)
         let distance = csLocation.distance(from: manager.location!)
-        let formatDistance = String(format: "%.01f", distance)
+        let formatDistance = String(format: "%.01f", distance) // Format number to a floating point with 1 decimal of precision
         mapState.text = "Distance to Comp Sci is \(formatDistance) metres."
     }
 }
