@@ -47,7 +47,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let csLocation = CLLocation(latitude: CSDept.coordinate.latitude, longitude: CSDept.coordinate.longitude)
         let distance = csLocation.distance(from: manager.location!)
         let formatDistance = String(format: "%.01f", distance) // Format number to a floating point with 1 decimal of precision
-        mapState.text = "Distance to Comp Sci is \(formatDistance) metres."
+        mapState.text = "Distance to Comp Sci is \(formatDistance)m"
     }
 }
 
