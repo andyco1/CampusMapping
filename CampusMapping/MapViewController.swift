@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
 
@@ -20,8 +20,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapState: UILabel!
     
+    @IBOutlet var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Map"
         // Sets a coordinate region with the Computer Science building as the centre and a 500m span.
         let regionSpan: CLLocationDistance = 500
         let coordinateRegion = MKCoordinateRegion(
