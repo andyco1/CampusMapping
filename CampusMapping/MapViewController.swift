@@ -48,13 +48,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let csLocation = CLLocation(latitude: CSDept.coordinate.latitude, longitude: CSDept.coordinate.longitude)
         let distance = csLocation.distance(from: manager.location!)
         let formatDistance = String(format: "%.01f", distance) // Format number to a floating point with 1 decimal of precision
-        mapState.text = "Distance to Comp Sci is \(formatDistance)m"
+        mapState.text = "Distance to Computer Science is \(formatDistance)m"
     }
 }
 
 class MapNode: NSObject, MKAnnotation {
     let coordinate: CLLocationCoordinate2D
-    let title: String?
+    var title: String?
     let subtitle: String?
     
     init(latitude: CLLocationDegrees, longitude: CLLocationDegrees, title: String, subtitle: String) {
