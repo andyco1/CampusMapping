@@ -64,6 +64,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="FKQ-8T-L15" id="Qfy-bh-Ose"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="tableReturn" id="oHC-IE-a15"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arO-g6-wND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -112,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="468" y="-765"/>
+            <point key="canvasLocation" x="558" y="-766"/>
         </scene>
         <!--Map-->
         <scene sceneID="9Yd-v1-iSR">
@@ -153,6 +154,9 @@
             <point key="canvasLocation" x="-669" y="13"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oHC-IE-a15"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="map.fill" catalog="system" width="32" height="32"/>
         <image name="pin.fill" catalog="system" width="32" height="32"/>

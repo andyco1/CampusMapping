@@ -7,7 +7,9 @@
 
 import UIKit
 
-class WaypointViewController: UIViewController {
+class WaypointViewController: UIViewController, UITableViewDelegate {
+    
+    var rowSelected : Int?
     
     public var models: [String] = [
         "Computer Science Building",
@@ -30,12 +32,10 @@ class WaypointViewController: UIViewController {
     
 }
 
-extension WaypointViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Row was tapped!")
-    }
-}
+//extension WaypointViewController: UITableViewDelegate {
+//
+//
+//}
 
 extension WaypointViewController: UITableViewDataSource {
     
@@ -49,4 +49,19 @@ extension WaypointViewController: UITableViewDataSource {
 //        cell.textLabel?.text = "Computer Science Building"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        rowSelected = indexPath.row
+        performSegue(withIdentifier: "tableReturn", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tableReturn" {
+            if let destVC = segue.destination as? MapViewController {
+            print(rowSelected!)
+            destVC.rowSelected = rowSelected
+        }
+    }
+}
+    
 }

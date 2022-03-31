@@ -16,6 +16,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     let CSDept = MapNode(latitude: 52.416278, longitude: -4.065484, title: "Computer Science Building",
                          subtitle: "Department of Computer Science")
     
+    var rowSelected: Int?
+
     @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var mapState: UILabel!
@@ -41,6 +43,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         mapView.showsUserLocation = true
 
         mapState.text = "State: Unknown"
+        
     }
     
     func locationManager(_ manager: CLLocationManager,  didUpdateLocations locations: [CLLocation]) {
