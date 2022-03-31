@@ -14,7 +14,9 @@ class WaypointViewController: UIViewController, UITableViewDelegate {
     public var models: [String] = [
         "Computer Science Building",
         "Penbryn Reception",
-        "Hugh Owen Library"
+        "Hugh Owen Library",
+        "Aberystwyth Arts Centre",
+        "Students Union"
     ]
     
     @IBOutlet var tableView: UITableView!

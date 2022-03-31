@@ -75,6 +75,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             targetNode.title = "Hugh Owen Library"
             targetNode.subtitle = "Aberystwyth University Library Building"
             label = "Library"
+        case 3:
+            targetNode.coordinate.latitude = 52.41585
+            targetNode.coordinate.longitude = -4.06278
+            targetNode.title = "Aberystwyth Arts Centre"
+            targetNode.subtitle = "Aberyswtyth Arts Centre Building"
+            label = "Arts Centre"
+        case 4:
+            targetNode.coordinate.latitude = 52.41518
+            targetNode.coordinate.longitude = -4.06313
+            targetNode.title = "Students Union"
+            targetNode.subtitle = "Aberyswtyth University Students Union"
+            label = "Students Union"
         default:
             print("Error in switch statement!")
         }
