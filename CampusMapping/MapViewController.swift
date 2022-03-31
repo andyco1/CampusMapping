@@ -12,16 +12,13 @@ import CoreLocation
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
-//
-//    let CSDept = MapNode(latitude: 52.416278, longitude: -4.065484, title: "Computer Science Building",
-//                         subtitle: "Department of Computer Science")
     
     var targetNode = MapNode(latitude: 52.416278, longitude: -4.065484, title: "Computer Science Building",
                              subtitle: "Department of Computer Science")
     
     var rowSelected: Int?
 
-    var label = "Comp Sci"
+    var label = "Comp Sci" // Default waypoint label
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -31,15 +28,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         self.navigationItem.title = "Map"
         updateSelection()
-        // Sets a coordinate region with the Computer Science building as the centre and a 500m span.
+        
+        // Sets a coordinate region with the targetNode as the centre and a 500m span.
         let regionSpan: CLLocationDistance = 500
         let coordinateRegion = MKCoordinateRegion(
-//             center: CSDept.coordinate,
             center: targetNode.coordinate,
              latitudinalMeters: regionSpan,
              longitudinalMeters: regionSpan)
-       mapView.setRegion(coordinateRegion, animated: true)
-//       mapView.addAnnotation(CSDept)
+        mapView.setRegion(coordinateRegion, animated: true)
         mapView.addAnnotation(targetNode)
         
         // Asks for user location permission. 10m accuracy and shows the users location.
@@ -55,7 +51,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     
-    func updateSelection() {
+    func updateSelection() { // Function to pull index of row selected on WaypointViewController and set the targetNode with data.
         switch rowSelected {
         case 0:
             targetNode.coordinate.latitude = 52.416278
@@ -93,9 +89,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager,  didUpdateLocations locations: [CLLocation]) {
-        // Do something with the location.
-//        let csLocation = CLLocation(latitude: CSDept.coordinate.latitude, longitude: CSDept.coordinate.longitude)
-//        let distance = csLocation.distance(from: manager.location!)
         let location = CLLocation(latitude: targetNode.coordinate.latitude, longitude: targetNode.coordinate.longitude)
         let distance = location.distance(from: manager.location!)
         let formatDistance = String(format: "%.01f", distance) // Format number to a floating point with 1 decimal of precision
