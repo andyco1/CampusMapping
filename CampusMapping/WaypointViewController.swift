@@ -13,7 +13,7 @@ class WaypointViewController: UIViewController, UITableViewDelegate {
     
     public var models: [String] = [
         "Computer Science Building",
-        "University Reception",
+        "Penbryn Reception",
         "Hugh Owen Library"
     ]
     
@@ -59,7 +59,7 @@ extension WaypointViewController: UITableViewDataSource {
         if segue.identifier == "tableReturn" {
             if let destVC = segue.destination as? MapViewController {
             print(rowSelected!)
-            destVC.rowSelected = rowSelected
+            destVC.rowSelected = rowSelected!
         }
     }
 }

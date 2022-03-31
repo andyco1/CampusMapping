@@ -12,6 +12,7 @@
         <scene sceneID="g8R-2f-iIM">
             <objects>
                 <tabBarController id="oPw-OA-IIj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1Tv-jp-Uzd"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="ppC-om-Nc5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -64,12 +65,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="FKQ-8T-L15" id="Qfy-bh-Ose"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="tableReturn" id="oHC-IE-a15"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="tableReturn" id="qqs-Kl-91S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arO-g6-wND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="468" y="13"/>
+            <point key="canvasLocation" x="345" y="-116"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -113,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="558" y="-766"/>
+            <point key="canvasLocation" x="1182" y="-857"/>
         </scene>
         <!--Map-->
         <scene sceneID="9Yd-v1-iSR">
@@ -121,6 +122,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fdL-XP-zL1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="map.fill" catalog="system" id="dnB-ui-E3v"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="BQx-mL-PCP"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rcc-CI-tio">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -132,7 +134,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFi-16-vI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-668" y="-765"/>
+            <point key="canvasLocation" x="-392" y="-714"/>
         </scene>
         <!--Waypoint-->
         <scene sceneID="aPA-Sf-Evi">
@@ -151,11 +153,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUO-8S-smC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-669" y="13"/>
+            <point key="canvasLocation" x="-709" y="297"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oHC-IE-a15"/>
+        <segue reference="3fM-4g-1DO"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="map.fill" catalog="system" width="32" height="32"/>
