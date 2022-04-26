@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  MapViewController.swift
 //  CampusMapping
 //
-//  Created by Andy Connor on 11/03/2022.
+//  Created by Andy Connor on 10/04/2022.
 //
 
 import UIKit
@@ -13,32 +13,36 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     
-    var targetNode = MapNode(latitude: 52.416278, longitude: -4.065484, title: "Computer Science Building",
-                             subtitle: "Department of Computer Science")
-    
-    var rowSelected: Int?
-
-    var label = "Comp Sci" // Default waypoint label
-    
     @IBOutlet weak var mapView: MKMapView!
     
-    @IBOutlet weak var mapState: UILabel!
+    var targetNode = MapNode(latitude: 52.416278, longitude: -4.065484, title: "Computer Science Building", subtitle: "Department of Computer Science", label: "Comp Sci")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Map"
-        updateSelection()
         
-        // Sets a coordinate region with the targetNode as the centre and a 500m span.
         let regionSpan: CLLocationDistance = 500
         let coordinateRegion = MKCoordinateRegion(
             center: targetNode.coordinate,
-             latitudinalMeters: regionSpan,
-             longitudinalMeters: regionSpan)
+            latitudinalMeters: regionSpan,
+            longitudinalMeters: regionSpan)
         mapView.setRegion(coordinateRegion, animated: true)
-        mapView.addAnnotation(targetNode)
+        let waypoints = DataLoader().waypointData
         
-        // Asks for user location permission. 10m accuracy and shows the users location.
+        
+        for waypoint in waypoints {
+            targetNode.coordinate.latitude = waypoint.latitude
+            targetNode.coordinate.longitude = waypoint.longitude
+            targetNode.title = waypoint.title
+            targetNode.subtitle = waypoint.subtitle
+            print(targetNode.title!)
+            print(targetNode.subtitle!)
+            print(targetNode.coordinate)
+            
+                        
+            mapView.addAnnotation(targetNode)
+            
+        }
+        
         locationManager.requestWhenInUseAuthorization()
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -46,66 +50,36 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         mapView.showsUserLocation = true
 
-        mapState.text = "State: Unknown"
-        
+        // Do any additional setup after loading the view.
     }
     
     
-    func updateSelection() { // Function to pull index of row selected on WaypointViewController and set the targetNode with data.
-        switch rowSelected {
-        case 0:
-            targetNode.coordinate.latitude = 52.416278
-            targetNode.coordinate.longitude = -4.065484
-            targetNode.title = "Computer Science Building"
-            targetNode.subtitle = "Department of Computer Science Building"
-            label = "Comp Sci"
-        case 1:
-            targetNode.coordinate.latitude = 52.41779
-            targetNode.coordinate.longitude = -4.06526
-            targetNode.title = "Penbryn Reception"
-            targetNode.subtitle = "Aberystwyth University Reception Building"
-            label = "Reception"
-        case 2:
-            targetNode.coordinate.latitude = 52.41612
-            targetNode.coordinate.longitude = -4.06365
-            targetNode.title = "Hugh Owen Library"
-            targetNode.subtitle = "Aberystwyth University Library Building"
-            label = "Library"
-        case 3:
-            targetNode.coordinate.latitude = 52.41585
-            targetNode.coordinate.longitude = -4.06278
-            targetNode.title = "Aberystwyth Arts Centre"
-            targetNode.subtitle = "Aberyswtyth Arts Centre Building"
-            label = "Arts Centre"
-        case 4:
-            targetNode.coordinate.latitude = 52.41518
-            targetNode.coordinate.longitude = -4.06313
-            targetNode.title = "Students Union"
-            targetNode.subtitle = "Aberyswtyth University Students Union"
-            label = "Students Union"
-        default:
-            print("Error in switch statement!")
-        }
-    }
     
-    func locationManager(_ manager: CLLocationManager,  didUpdateLocations locations: [CLLocation]) {
-        let location = CLLocation(latitude: targetNode.coordinate.latitude, longitude: targetNode.coordinate.longitude)
-        let distance = location.distance(from: manager.location!)
-        let formatDistance = String(format: "%.01f", distance) // Format number to a floating point with 1 decimal of precision
-        mapState.text = "Distance to \(label) is \(formatDistance)m"
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
+    */
+
 }
 
+public class MapNode: NSObject, MKAnnotation {
+    public var coordinate: CLLocationCoordinate2D
+    public var title: String?
+    public var subtitle: String?
+    public var label: String?
 
-class MapNode: NSObject, MKAnnotation {
-    var coordinate: CLLocationCoordinate2D
-    var title: String?
-    var subtitle: String?
-    
-    init(latitude: CLLocationDegrees, longitude: CLLocationDegrees, title: String, subtitle: String) {
+    init(latitude: CLLocationDegrees, longitude: CLLocationDegrees, title: String, subtitle: String, label: String) {
         coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         self.title = title
         self.subtitle = subtitle
+        self.label = label
     }
 }
-
+        
+        

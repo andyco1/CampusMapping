@@ -1,0 +1,49 @@
+
+[
+    
+    { 
+      "id": 0,
+      "title": "Computer Science Building",
+      "subtitle": "Department of Computer Science",
+      "label": "Comp Sci",
+      "latitude": 52.416278,
+      "longitude": -4.065484
+      
+    },
+    
+    {
+      "id": 1,
+      "title": "Penbryn Reception",
+      "subtitle": "Aberystwyth University Building",
+      "label": "Reception",
+      "latitude": 52.41779,
+      "longitude": -4.065484
+    },
+    
+    {
+      "id": 2,
+      "title": "Hugh Owen Library",
+      "subtitle": "Aberystwyth University Library Building",
+      "label": "Library",
+      "latitude": 52.41612,
+      "longitude": -4.06365
+    },
+    
+    {
+      "id": 3,
+      "title": "Arts Centre",
+      "subtitle": "Aberystwyth University Arts Centre Building",
+      "label": "Arts Centre",
+      "latitude": 52.41585,
+      "longitude": -4.06278
+    },
+    
+    {
+      "id": 4,
+      "title": "Students Union",
+      "subtitle": "Aberystwyth University Students Union Building",
+      "label": "Students Union",
+      "latitude": 52.41518,
+      "longitude": -4.06313
+    }
+]

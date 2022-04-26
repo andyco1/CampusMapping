@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="-1657" y="-298"/>
         </scene>
-        <!--Waypoint View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="C3a-w6-LBN">
             <objects>
-                <viewController id="Xpr-Cx-Gd7" customClass="WaypointViewController" customModule="CampusMapping" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xpr-Cx-Gd7" customClass="TableViewController" customModule="CampusMapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="onH-9u-mVV">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,12 +70,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arO-g6-wND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="345" y="-116"/>
+            <point key="canvasLocation" x="682" y="296"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Waypoint View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="CampusMapping" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WaypointViewController" customModule="CampusMapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182" y="-857"/>
+            <point key="canvasLocation" x="2297" y="296"/>
         </scene>
         <!--Map-->
         <scene sceneID="9Yd-v1-iSR">
@@ -129,7 +129,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3fM-4g-1DO"/>
+                        <segue destination="OVU-eh-my6" kind="relationship" relationship="rootViewController" id="ER0-7J-n8o"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFi-16-vI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -155,10 +155,37 @@
             </objects>
             <point key="canvasLocation" x="-709" y="297"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="OMu-h6-CJW">
+            <objects>
+                <viewController id="OVU-eh-my6" customClass="MapViewController" customModule="CampusMapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dfy-0c-Rbt">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Tb2-fK-HNm">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6H0-cP-ioJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tb2-fK-HNm" firstAttribute="leading" secondItem="6H0-cP-ioJ" secondAttribute="leading" id="3Zm-zx-PG4"/>
+                            <constraint firstItem="Tb2-fK-HNm" firstAttribute="top" secondItem="Dfy-0c-Rbt" secondAttribute="top" id="baC-Dd-7cQ"/>
+                            <constraint firstItem="Tb2-fK-HNm" firstAttribute="trailing" secondItem="6H0-cP-ioJ" secondAttribute="trailing" id="pzx-EC-z0i"/>
+                            <constraint firstAttribute="bottom" secondItem="Tb2-fK-HNm" secondAttribute="bottom" id="zyP-Km-eX5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vCK-ud-mu2"/>
+                    <connections>
+                        <outlet property="mapView" destination="Tb2-fK-HNm" id="Q8R-EO-ztA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Znq-R6-7R5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1267.6923076923076" y="-714.45497630331749"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="qqs-Kl-91S"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="map.fill" catalog="system" width="32" height="32"/>
         <image name="pin.fill" catalog="system" width="32" height="32"/>
