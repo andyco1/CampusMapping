@@ -11,14 +11,6 @@ class TableViewController: UIViewController, UITableViewDelegate {
     
     var rowSelected : Int?
     
-    public var models: [String] = [
-        "Computer Science Building",
-        "Penbryn Reception",
-        "Hugh Owen Library",
-        "Aberystwyth Arts Centre",
-        "Students Union"
-    ]
-    
     let waypoints = DataLoader().waypointData
     
     @IBOutlet var tableView: UITableView!
@@ -47,7 +39,6 @@ extension TableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = waypoints[indexPath.row].title
-//        models[indexPath.row]
         return cell
     }
     
