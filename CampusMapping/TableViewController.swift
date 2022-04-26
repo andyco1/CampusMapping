@@ -46,7 +46,8 @@ extension TableViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = models[indexPath.row]
+        cell.textLabel?.text = waypoints[indexPath.row].title
+//        models[indexPath.row]
         return cell
     }
     
