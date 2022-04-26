@@ -15,14 +15,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    var targetNode = MapNode(latitude: 52.416278, longitude: -4.065484, title: "Computer Science Building", subtitle: "Department of Computer Science", label: "Comp Sci")
+    var startNode = MapNode(latitude: 52.416278, longitude: -4.065484, title: "Computer Science Building", subtitle: "Department of Computer Science", label: "Comp Sci")
+    
+    var multipleAnnotations: [MKAnnotation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let regionSpan: CLLocationDistance = 500
         let coordinateRegion = MKCoordinateRegion(
-            center: targetNode.coordinate,
+            center: startNode.coordinate,
             latitudinalMeters: regionSpan,
             longitudinalMeters: regionSpan)
         mapView.setRegion(coordinateRegion, animated: true)
@@ -30,16 +32,23 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         
         for waypoint in waypoints {
-            targetNode.coordinate.latitude = waypoint.latitude
-            targetNode.coordinate.longitude = waypoint.longitude
-            targetNode.title = waypoint.title
-            targetNode.subtitle = waypoint.subtitle
-            print(targetNode.title!)
-            print(targetNode.subtitle!)
-            print(targetNode.coordinate)
+            let annotation = MKPointAnnotation()
             
+            annotation.title = waypoint.title
+            annotation.subtitle = waypoint.subtitle
+            annotation.coordinate = waypoint.coordinate
+            
+            multipleAnnotations.append(annotation)
+//            targetNode.coordinate.latitude = waypoint.latitude
+//            targetNode.coordinate.longitude = waypoint.longitude
+//            targetNode.title = waypoint.title
+//            targetNode.subtitle = waypoint.subtitle
+//            print(targetNode.title!)
+//            print(targetNode.subtitle!)
+//            print(targetNode.coordinate)
                         
-            mapView.addAnnotation(targetNode)
+            mapView.addAnnotations(multipleAnnotations)
+//            print(targetNode)
             
         }
         
