@@ -27,9 +27,11 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapState: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Map"
+        self.view.bringSubviewToFront(mapState)
 //        let data = DataLoader().waypointData
 //        print(data)
 //        updateSelection()
