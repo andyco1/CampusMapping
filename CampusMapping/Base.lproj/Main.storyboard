@@ -113,6 +113,21 @@
             </objects>
             <point key="canvasLocation" x="2296.9230769230767" y="295.73459715639808"/>
         </scene>
+        <!--Building View Controller-->
+        <scene sceneID="Uwa-wM-TVy">
+            <objects>
+                <viewController storyboardIdentifier="BuildingViewController" id="KyR-O5-Eag" customClass="BuildingViewController" customModule="CampusMapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rhM-rB-tjW">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mKR-Bg-f9z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XEe-Fl-WF0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3514" y="296"/>
+        </scene>
         <!--Map-->
         <scene sceneID="9Yd-v1-iSR">
             <objects>
