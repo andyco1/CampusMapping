@@ -60,9 +60,7 @@
                             <constraint firstItem="FKQ-8T-L15" firstAttribute="leading" secondItem="Fay-nc-4KW" secondAttribute="leading" id="gzt-4h-lgJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="jHz-3g-xKk">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Tbq-RG-1K8"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="jHz-3g-xKk"/>
                     <connections>
                         <outlet property="tableView" destination="FKQ-8T-L15" id="Qfy-bh-Ose"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="tableReturn" id="qqs-Kl-91S"/>
