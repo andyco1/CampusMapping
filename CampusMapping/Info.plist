@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Location permission is required to be always authorized to allow region monitoring to work</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Permission is required to show your position on the map</string>
 	<key>UIApplicationSceneManifest</key>

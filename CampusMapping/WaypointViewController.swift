@@ -47,7 +47,8 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
         
         
         // Asks for user location permission. 10m accuracy and shows the users location.
-        locationManager.requestWhenInUseAuthorization()
+//        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.delegate = self
@@ -56,6 +57,9 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
 
         mapState.text = "State: Unknown"
         
+        let geoFenceRegion:CLCircularRegion = CLCircularRegion(center: targetNode.coordinate, radius: 100, identifier: targetNode.label!)
+
+        locationManager.startMonitoring(for: geoFenceRegion)
     }
     
     func waypointSelection() {
@@ -67,7 +71,43 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
         mapView.addAnnotation(targetNode)
     }
     
+    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
+        if (state == .inside) {
+            print("User inside the radius of \(targetNode.label!)")
+        } else {
+            print("User outside target region")
+        }
+    }
     
+//    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+//        print("Entered \(region.identifier)")
+//    }
+//    
+//    
+//    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+//        print("Exited \(region.identifier)")
+//    }
+
+    func locationManager(_ manager: CLLocationManager,  didUpdateLocations locations: [CLLocation]) {
+        let location = CLLocation(latitude: targetNode.coordinate.latitude, longitude: targetNode.coordinate.longitude)
+        let distance = location.distance(from: manager.location!)
+        let formatDistance = String(format: "%.01f", distance) // Format number to a floating point with 1 decimal of precision
+        mapState.text = "Distance to \(targetNode.label!) is \(formatDistance)m"
+    }
+    
+    
+}
+
+//private class MapNode: NSObject, MKAnnotation {
+//    var coordinate: CLLocationCoordinate2D
+//    var title: String?
+//    var subtitle: String?
+//
+//    init(latitude: CLLocationDegrees, longitude: CLLocationDegrees, title: String, subtitle: String) {
+//        coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+//        self.title = title
+//        self.subtitle = subtitle
+//
 //    func updateSelection() { // Function to pull index of row selected on WaypointViewController and set the targetNode with data.
 //        switch rowSelected {
 //        case 0:
@@ -104,24 +144,6 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
 //            print("Error in switch statement!")
 //        }
 //    }
-    
-    func locationManager(_ manager: CLLocationManager,  didUpdateLocations locations: [CLLocation]) {
-        let location = CLLocation(latitude: targetNode.coordinate.latitude, longitude: targetNode.coordinate.longitude)
-        let distance = location.distance(from: manager.location!)
-        let formatDistance = String(format: "%.01f", distance) // Format number to a floating point with 1 decimal of precision
-        mapState.text = "Distance to \(targetNode.label!) is \(formatDistance)m"
-    }
-}
-
-//private class MapNode: NSObject, MKAnnotation {
-//    var coordinate: CLLocationCoordinate2D
-//    var title: String?
-//    var subtitle: String?
-//
-//    init(latitude: CLLocationDegrees, longitude: CLLocationDegrees, title: String, subtitle: String) {
-//        coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-//        self.title = title
-//        self.subtitle = subtitle
 //    }
 //}
 
