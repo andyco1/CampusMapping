@@ -31,6 +31,6 @@ public class DataLoader {
     }
     
     func sort() {
-        self.waypointData = self.waypointData.sorted(by: { $0.id < $1.id }) // Sort data by ID in ascending order
+        self.waypointData = self.waypointData.sorted(by: { $0.title! < $1.title! }) // Sort data by title in ascending order
     }
 }
