@@ -49,9 +49,9 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
 
         mapState.text = "State: Unknown"
         
-        let geoFenceRegion:CLCircularRegion = CLCircularRegion(center: targetNode.coordinate, radius: 100, identifier: targetNode.label!) // Creates Geo-fence region around targetNode selected by user. CoreLocation has limitations on its minumum radius distance. From testing it appears the minumum is 200m no matter what value is set in this function.
+//        let geoFenceRegion:CLCircularRegion = CLCircularRegion(center: targetNode.coordinate, radius: 100, identifier: targetNode.label!) // Creates Geo-fence region around targetNode selected by user. CoreLocation has limitations on its minumum radius distance. From testing it appears the minumum is 200m no matter what value is set in this function.
 
-        locationManager.startMonitoring(for: geoFenceRegion)
+//        locationManager.startMonitoring(for: geoFenceRegion)
     }
     
     func waypointSelection() {
@@ -63,14 +63,14 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
         mapView.addAnnotation(targetNode)
     }
     
-    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
-        if (state == .inside) {
-            print("User inside the radius of \(targetNode.label!)")
-            self.performSegue(withIdentifier: "regionPushView", sender: self)
-        } else {
-            print("User outside target region")
-        }
-    }
+//    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
+//        if (state == .inside) {
+//            print("User inside the radius of \(targetNode.label!)")
+//            self.performSegue(withIdentifier: "regionPushView", sender: self)
+//        } else {
+//            print("User outside target region")
+//        }
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Allows index of targetNode to be passed to BuildingViewController
@@ -87,6 +87,11 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
         let distance = location.distance(from: manager.location!)
         let formatDistance = String(format: "%.01f", distance) // Format number to a floating point with 1 decimal of precision
         mapState.text = "Distance to \(targetNode.label!) is \(formatDistance)m"
+        
+        if distance < 50 {
+            print("User inside the radius of \(targetNode.label!)")
+            self.performSegue(withIdentifier: "regionPushView", sender: self)
+        }
     }
     
 }
