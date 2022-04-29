@@ -66,8 +66,6 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
         if (state == .inside) {
             print("User inside the radius of \(targetNode.label!)")
-//            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BuildingViewController") as! BuildingViewController
-//            self.navigationController?.pushViewController(vc, animated: true)
             self.performSegue(withIdentifier: "regionPushView", sender: self)
         } else {
             print("User outside target region")
@@ -90,19 +88,6 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
         let formatDistance = String(format: "%.01f", distance) // Format number to a floating point with 1 decimal of precision
         mapState.text = "Distance to \(targetNode.label!) is \(formatDistance)m"
     }
-    
-    //    func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
-    //
-    //    }
-    
-    //    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-    //        print("Entered \(region.identifier)")
-    //    }
-    //
-    //
-    //    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-    //        print("Exited \(region.identifier)")
-    //    }
     
 }
 

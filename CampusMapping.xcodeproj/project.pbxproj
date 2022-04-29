@@ -85,11 +85,11 @@
 				81A4CFF427DBAE1C00E5E0D6 /* AppDelegate.swift */,
 				81A4CFF627DBAE1C00E5E0D6 /* SceneDelegate.swift */,
 				819257DD280F314E00D717D9 /* locations.json */,
+				819257E5281BAC4B00D717D9 /* buildings.json */,
 				81A4CFFA27DBAE1C00E5E0D6 /* Main.storyboard */,
 				81A4CFFD27DBAE1D00E5E0D6 /* Assets.xcassets */,
 				81A4CFFF27DBAE1D00E5E0D6 /* LaunchScreen.storyboard */,
 				81A4D00227DBAE1D00E5E0D6 /* Info.plist */,
-				819257E5281BAC4B00D717D9 /* buildings.json */,
 			);
 			path = CampusMapping;
 			sourceTree = "<group>";
