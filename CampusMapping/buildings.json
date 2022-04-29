@@ -1,0 +1,53 @@
+[
+    
+    { 
+        "id": 0,
+        "title": "Computer Science Building",
+        "teachingRooms": ["A6", "B20"],
+        "roomDescription": ["A6 is located on the basement level of the Llandinam tower on Penglais Campus",
+        "B20 is located on the ground floor of the Llandinam building on Penglais Campus"]
+      
+    },
+    
+    {
+        "id": 1,
+        "title": "Penbryn Reception",
+        "teachingRooms": ["A1", "A2"],
+        "roomDescription": ["lorem ipsum 1",
+        "lorem ipsum 2"]
+    },
+    
+    
+    {
+        "id": 2,
+        "title": "Hugh Owen Building",
+        "teachingRooms": ["A9", "A12"],
+        "roomDescription": ["A9 is located on Level A at the North end of the Hugh Owen building on Penglais campus. This room is near the university's main entrance and across the road from Penbryn TaMeD Da",
+        "A12 is located on Level A of the Hugh Owen building extension on Penglais campus, near to the University's main entrance and across from Penbryn TaMed Da"]
+    },
+    
+    
+    {
+        "id": 3,
+        "title": "Arts Centre",
+        "teachingRooms": ["A1", "A2"],
+        "roomDescription": ["even more lorem ipsum 1",
+        "shockingly more lorem ipsum 2"]
+    },
+    
+    {
+        "id": 4,
+        "title": "Students Union",
+        "teachingRooms": ["A1", "A2"],
+        "roomDescription": ["lorem ipsum 1",
+        "lorem ipsum 2"]
+    },
+    
+    {
+        "id": 5,
+        "title": "Test4",
+        "teachingRooms": ["A1", "A2"],
+        "roomDescription": ["end of lorem ipsum 1",
+        "last bit of lorem ipsum 2"]
+    }
+]

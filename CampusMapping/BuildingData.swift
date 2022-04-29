@@ -9,6 +9,8 @@ import Foundation
 
 struct BuildingData: Codable {
     var id: Int
+    var title: String?
     var teachingRooms: [String]
+    var roomDescription: [String]
 
 }

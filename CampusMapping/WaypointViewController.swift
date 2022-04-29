@@ -15,7 +15,7 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
     
     var rowSelected: Int?
 
-    let waypoints = DataLoader().waypointData
+    let waypoints = WaypointDataLoader().waypointData
     
     private var targetNode = MapNode(latitude: 52.416278, longitude: -4.065484, title: "Computer Science Building",
                                      subtitle: "Department of Computer Science", label: "Comp Sci")
@@ -24,13 +24,9 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapState: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Map"
-//        let data = DataLoader().waypointData
-//        print(data)
-//        updateSelection()
         waypointSelection()
         
         // Sets a coordinate region with the targetNode as the centre and a 500m span.
@@ -53,10 +49,9 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
 
         mapState.text = "State: Unknown"
         
-        let geoFenceRegion:CLCircularRegion = CLCircularRegion(center: targetNode.coordinate, radius: 100, identifier: targetNode.label!) // Creates Geo-fence region around targetNode selected by user. CoreLocation has limitations on its minumum radius distance. From testing it appears the minumum is 150m no matter what value is set in this function.
+        let geoFenceRegion:CLCircularRegion = CLCircularRegion(center: targetNode.coordinate, radius: 100, identifier: targetNode.label!) // Creates Geo-fence region around targetNode selected by user. CoreLocation has limitations on its minumum radius distance. From testing it appears the minumum is 200m no matter what value is set in this function.
 
         locationManager.startMonitoring(for: geoFenceRegion)
-//        locationManager.requestState(for: geoFenceRegion)
     }
     
     func waypointSelection() {
@@ -71,25 +66,23 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
         if (state == .inside) {
             print("User inside the radius of \(targetNode.label!)")
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BuildingViewController") as! BuildingViewController
-            self.navigationController?.pushViewController(vc, animated: true)
+//            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BuildingViewController") as! BuildingViewController
+//            self.navigationController?.pushViewController(vc, animated: true)
+            self.performSegue(withIdentifier: "regionPushView", sender: self)
         } else {
             print("User outside target region")
         }
     }
     
-//    func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
-//
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Allows index of targetNode to be passed to BuildingViewController
+        if segue.identifier == "regionPushView" {
+            if let destVC = segue.destination as? BuildingViewController {
+                destVC.rowSelected = rowSelected!
+            }
+        }
+    }
     
-//    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-//        print("Entered \(region.identifier)")
-//    }
-//    
-//    
-//    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-//        print("Exited \(region.identifier)")
-//    }
 
     func locationManager(_ manager: CLLocationManager,  didUpdateLocations locations: [CLLocation]) {
         let location = CLLocation(latitude: targetNode.coordinate.latitude, longitude: targetNode.coordinate.longitude)
@@ -98,55 +91,18 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
         mapState.text = "Distance to \(targetNode.label!) is \(formatDistance)m"
     }
     
+    //    func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
+    //
+    //    }
+    
+    //    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+    //        print("Entered \(region.identifier)")
+    //    }
+    //
+    //
+    //    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+    //        print("Exited \(region.identifier)")
+    //    }
     
 }
-
-//private class MapNode: NSObject, MKAnnotation {
-//    var coordinate: CLLocationCoordinate2D
-//    var title: String?
-//    var subtitle: String?
-//
-//    init(latitude: CLLocationDegrees, longitude: CLLocationDegrees, title: String, subtitle: String) {
-//        coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-//        self.title = title
-//        self.subtitle = subtitle
-//
-//    func updateSelection() { // Function to pull index of row selected on WaypointViewController and set the targetNode with data.
-//        switch rowSelected {
-//        case 0:
-//            targetNode.coordinate.latitude = 52.416278
-//            targetNode.coordinate.longitude = -4.065484
-//            targetNode.title = "Computer Science Building"
-//            targetNode.subtitle = "Department of Computer Science Building"
-//            label = "Comp Sci"
-//        case 1:
-//            targetNode.coordinate.latitude = 52.41779
-//            targetNode.coordinate.longitude = -4.06526
-//            targetNode.title = "Penbryn Reception"
-//            targetNode.subtitle = "Aberystwyth University Reception Building"
-//            label = "Reception"
-//        case 2:
-//            targetNode.coordinate.latitude = 52.41612
-//            targetNode.coordinate.longitude = -4.06365
-//            targetNode.title = "Hugh Owen Library"
-//            targetNode.subtitle = "Aberystwyth University Library Building"
-//            label = "Library"
-//        case 3:
-//            targetNode.coordinate.latitude = 52.41585
-//            targetNode.coordinate.longitude = -4.06278
-//            targetNode.title = "Aberystwyth Arts Centre"
-//            targetNode.subtitle = "Aberyswtyth Arts Centre Building"
-//            label = "Arts Centre"
-//        case 4:
-//            targetNode.coordinate.latitude = 52.41518
-//            targetNode.coordinate.longitude = -4.06313
-//            targetNode.title = "Students Union"
-//            targetNode.subtitle = "Aberyswtyth University Students Union"
-//            label = "Students Union"
-//        default:
-//            print("Error in switch statement!")
-//        }
-//    }
-//    }
-//}
 

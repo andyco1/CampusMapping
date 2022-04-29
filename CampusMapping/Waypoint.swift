@@ -20,13 +20,4 @@ struct Waypoint: Codable {
     var coordinate: CLLocationCoordinate2D {
         .init(latitude: latitude, longitude: longitude)
     }
-    
-//    init(id: Int, title: String?, subtitle: String?, label: String?, latitude: Double, longitude: Double) {
-//        self.id = id
-//        self.title = title
-//        self.subtitle = subtitle
-//        self.label = label
-//        self.latitude = latitude
-//        self.longitude = longitude
-//    }
 }

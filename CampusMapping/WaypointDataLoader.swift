@@ -7,9 +7,9 @@
 
 import Foundation
 
-public class DataLoader {
+public class WaypointDataLoader {
     
-    @Published var waypointData = [Waypoint]()
+    var waypointData = [Waypoint]()
     
     init() {
         load()
@@ -31,6 +31,8 @@ public class DataLoader {
     }
     
     func sort() {
-        self.waypointData = self.waypointData.sorted(by: { $0.title! < $1.title! }) // Sort data by title in ascending order
+        self.waypointData = self.waypointData.sorted(by: { $0.id < $1.id }) // Sort waypoint data by ID in ascending order
+        
+//        self.waypointData = self.waypointData.sorted(by: { $0.title! < $1.title! })
     }
 }

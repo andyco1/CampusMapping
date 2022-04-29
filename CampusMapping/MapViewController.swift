@@ -28,7 +28,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             latitudinalMeters: regionSpan,
             longitudinalMeters: regionSpan)
         mapView.setRegion(coordinateRegion, animated: true)
-        let waypoints = DataLoader().waypointData
+        let waypoints = WaypointDataLoader().waypointData
         
         
         for waypoint in waypoints {
@@ -39,16 +39,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             annotation.coordinate = waypoint.coordinate
             
             multipleAnnotations.append(annotation)
-//            targetNode.coordinate.latitude = waypoint.latitude
-//            targetNode.coordinate.longitude = waypoint.longitude
-//            targetNode.title = waypoint.title
-//            targetNode.subtitle = waypoint.subtitle
-//            print(targetNode.title!)
-//            print(targetNode.subtitle!)
-//            print(targetNode.coordinate)
                         
             mapView.addAnnotations(multipleAnnotations)
-//            print(targetNode)
             
         }
         
@@ -58,22 +50,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
         mapView.showsUserLocation = true
-
-        // Do any additional setup after loading the view.
     }
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

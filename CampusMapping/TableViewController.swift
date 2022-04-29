@@ -11,7 +11,7 @@ class TableViewController: UIViewController, UITableViewDelegate {
     
     var rowSelected : Int?
     
-    let waypoints = DataLoader().waypointData
+    let waypoints = WaypointDataLoader().waypointData
     
     @IBOutlet var tableView: UITableView!
 
@@ -53,8 +53,8 @@ extension TableViewController: UITableViewDataSource {
         if segue.identifier == "tableReturn" {
             if let destVC = segue.destination as? WaypointViewController {
             destVC.rowSelected = rowSelected!
+            }
         }
     }
-}
     
 }
