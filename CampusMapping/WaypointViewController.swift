@@ -13,10 +13,7 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     
-    
     var rowSelected: Int?
-
-//    var label = "Comp Sci" // Default waypoint label
 
     let waypoints = DataLoader().waypointData
     
@@ -31,7 +28,6 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Map"
-        self.view.bringSubviewToFront(mapState)
 //        let data = DataLoader().waypointData
 //        print(data)
 //        updateSelection()
@@ -57,9 +53,10 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
 
         mapState.text = "State: Unknown"
         
-        let geoFenceRegion:CLCircularRegion = CLCircularRegion(center: targetNode.coordinate, radius: 100, identifier: targetNode.label!)
+        let geoFenceRegion:CLCircularRegion = CLCircularRegion(center: targetNode.coordinate, radius: 100, identifier: targetNode.label!) // Creates Geo-fence region around targetNode selected by user. CoreLocation has limitations on its minumum radius distance. From testing it appears the minumum is 150m no matter what value is set in this function.
 
         locationManager.startMonitoring(for: geoFenceRegion)
+//        locationManager.requestState(for: geoFenceRegion)
     }
     
     func waypointSelection() {
@@ -80,6 +77,10 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
             print("User outside target region")
         }
     }
+    
+//    func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
+//
+//    }
     
 //    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
 //        print("Entered \(region.identifier)")
