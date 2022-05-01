@@ -31,7 +31,7 @@ public class WaypointDataLoader {
     }
     
     func sort() {
-        self.waypointData = self.waypointData.sorted(by: { $0.id < $1.id }) // Sort waypoint data by ID in ascending order
+        self.waypointData = self.waypointData.sorted(by: { $0.id < $1.id }) // Sort waypoint data by ID in ascending order to allow selected row to be called by functions
         
 //        self.waypointData = self.waypointData.sorted(by: { $0.title! < $1.title! })
     }
