@@ -69,8 +69,6 @@
 			children = (
 				819257DF2814BD9B00D717D9 /* BuildingDataLoader.swift */,
 				819257E7281BB75E00D717D9 /* RoomDataLoader.swift */,
-				81A4CFF427DBAE1C00E5E0D6 /* AppDelegate.swift */,
-				81A4CFF627DBAE1C00E5E0D6 /* SceneDelegate.swift */,
 			);
 			path = DataLoaders;
 			sourceTree = "<group>";
@@ -109,6 +107,8 @@
 				813DA620282098B3003457F3 /* ViewControllers */,
 				813DA61E2820988C003457F3 /* Classes */,
 				813DA61F28209898003457F3 /* DataLoaders */,
+				81A4CFF427DBAE1C00E5E0D6 /* AppDelegate.swift */,
+				81A4CFF627DBAE1C00E5E0D6 /* SceneDelegate.swift */,
 				813DA619281FCE99003457F3 /* buildingData.json */,
 				81A4CFFA27DBAE1C00E5E0D6 /* Main.storyboard */,
 				81A4CFFD27DBAE1D00E5E0D6 /* Assets.xcassets */,
