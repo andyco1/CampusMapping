@@ -18,8 +18,7 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
     let waypoints = BuildingDataLoader().waypointData
     
     // Mock data to initialise the variable
-    private var targetNode = MapNode(latitude: 52.416278, longitude: -4.065484, title: "Computer Science Building",
-                                     subtitle: "Department of Computer Science", label: "Comp Sci")
+    private var targetNode = MapNode(latitude: 52.416278, longitude: -4.065484, title: "Computer Science Building", subtitle: "Department of Computer Science", label: "Comp Sci")
     
     @IBOutlet weak var mapView: MKMapView!
     
