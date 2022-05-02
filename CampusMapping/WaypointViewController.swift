@@ -75,7 +75,7 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Allows index of targetNode to be passed to BuildingViewController
         if segue.identifier == "regionPushView" {
-            if let destVC = segue.destination as? BuildingViewController {
+            if let destVC = segue.destination as? RoomTableViewController {
                 destVC.rowSelected = rowSelected!
             }
         }

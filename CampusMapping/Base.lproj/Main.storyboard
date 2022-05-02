@@ -107,41 +107,44 @@
                     <connections>
                         <outlet property="mapState" destination="ikK-I8-lEz" id="hwb-qL-j9X"/>
                         <outlet property="mapView" destination="573-0M-ldP" id="6G0-kZ-7D6"/>
-                        <segue destination="cnc-zc-SgX" kind="show" identifier="regionPushView" id="Uuk-Uz-cua"/>
+                        <segue destination="nua-b0-Xs0" kind="show" identifier="regionPushView" id="zFF-yV-b3j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1937" y="296"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="LyE-qm-8iZ">
+        <!--Room Table View Controller-->
+        <scene sceneID="jtF-Nd-48n">
             <objects>
-                <tableViewController id="cnc-zc-SgX" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="cvg-dr-r68">
+                <tableViewController id="nua-b0-Xs0" customClass="RoomTableViewController" customModule="CampusMapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="IRU-29-9eB">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="roomCell" id="VR7-Sc-wGY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="room" id="AqD-SR-igI">
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VR7-Sc-wGY" id="MRy-nZ-lLd">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AqD-SR-igI" id="2va-T4-jtC">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="cnc-zc-SgX" id="PGz-Hd-P4S"/>
-                            <outlet property="delegate" destination="cnc-zc-SgX" id="hci-s8-MFZ"/>
+                            <outlet property="dataSource" destination="nua-b0-Xs0" id="VvN-n6-m1T"/>
+                            <outlet property="delegate" destination="nua-b0-Xs0" id="Ny2-6y-pM6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Dr6-Kh-OTW"/>
+                    <navigationItem key="navigationItem" id="Zbl-Xb-Z9S"/>
+                    <connections>
+                        <outlet property="roomTableView" destination="IRU-29-9eB" id="N8w-bn-1yt"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dg2-Yg-TrC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4iH-yh-EJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3142" y="296"/>
+            <point key="canvasLocation" x="3099" y="284"/>
         </scene>
         <!--Map-->
         <scene sceneID="9Yd-v1-iSR">
