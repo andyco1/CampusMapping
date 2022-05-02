@@ -29,9 +29,10 @@ class DescriptionViewController: UIViewController {
         
         descriptionLabel.text = roomDescriptions[rowSelected!].roomDescription[roomSelected!]
         
-        imageView.image = UIImage(named: "hugh-owen-new")
+        print(rowSelected!)
+        print(roomSelected!)
         
-        
+        imageView.image = UIImage(named: roomDescriptions[rowSelected!].imageSource[roomSelected!])
 
         // Do any additional setup after loading the view.
     }

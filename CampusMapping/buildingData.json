@@ -11,7 +11,8 @@
       "teachingRooms": ["0.21", "0.25", ".28"],
       "roomDescription": ["0.21 is located on the ground floor of Cledwyn building", 
         "0.25 is a Virtual Meetings Room in the Cledwyn building",
-        "0.28 is in the Cledwyn building on Penglais campus.‌ You will find this building next door to IBERS and across the road from the Student Welcome Centre"]
+        "0.28 is in the Cledwyn building on Penglais campus.‌ You will find this building next door to IBERS and across the road from the Student Welcome Centre"],
+      "imageSource": ["0.21", "0.25", "0.28"]
     },
     
     {
@@ -25,7 +26,8 @@
       "roomDescription": ["0.01 is located on the lower ground floor of the Edward Llwyd building on Penglais campus",
         "0.26 is located on the lower ground floor of the Edward Llwyd building on Penglais campus", 
         "1.16 is located on the ground floor of the Edward Llwyd building on Penglais campus",
-        "3.34 is located on the top floor of the Edward Llwyd building on Penglais campus"]
+        "3.34 is located on the top floor of the Edward Llwyd building on Penglais campus"],
+      "imageSource": ["0.01"]
     },
     
     {
@@ -51,7 +53,8 @@
         "C66 is located in the Hugh Owen building extension on Penglais campus, near to the university's main entrance and across from Penbryn TaMed Da",
         "D5 is located on Level D of the Hugh Owen building on Penglais campus next to Hugh Owen library",
         "D54 is located on Level D of the Hugh Owen building on Penglais campus next to Hugh Owen library",
-        "D59 is located on Level D of the Hugh Owen building on Penglais campus next to Hugh Owen library"]
+        "D59 is located on Level D of the Hugh Owen building on Penglais campus next to Hugh Owen library"],
+      "imageSource": ["a9", "a12", "a14", "b21a", "b21b", "c4", "c6", "c22", "c43", "c48", "c64", "c65", "c66", "d5", "d54", "d59"]
     },
     
     {
@@ -67,7 +70,8 @@
         "0.32 is located on the ground floor of the IBERS building on Penglais campus",
         "IBERS 1.31 is located on the first floor of the IBERS building on Penglais campus",
         "IBERS 1.32 is located on the first floor of the IBERS building on Penglais campus",
-        "IBERS 1.35 is located on the first floor of the IBERS building on Penglais campus"]
+        "IBERS 1.35 is located on the first floor of the IBERS building on Penglais campus"],
+      "imageSource": ["0.30"]
     },
     
     {
@@ -78,7 +82,8 @@
       "latitude": 52.41517,
       "longitude": -4.06397,
       "teachingRooms": ["Seminar Room 1"],
-      "roomDescription": ["The International Politics Seminar Room 1 is located on Level 0 of the International Politics building on Penglais campus. You will find this building near to the pedestrian crossing on the road at the front of Aberystwyth Arts Centre"]
+      "roomDescription": ["The International Politics Seminar Room 1 is located on Level 0 of the International Politics building on Penglais campus. You will find this building near to the pedestrian crossing on the road at the front of Aberystwyth Arts Centre"],
+      "imageSource": ["sr1"]
     },
 
     {
@@ -100,7 +105,8 @@
         "C65 is on the first floor of the Llandinam building",
         "G3 is located on the fifth floor of the Llandinam tower on Penglais campus",
         "G3a is located on the fifth floor of the Llandinam tower on Penglais campus",
-        "The Think Tank is located on the ground floor of the Llandinam building"]
+        "The Think Tank is located on the ground floor of the Llandinam building"],
+      "imageSource": ["A6"]
     },
 
     {
@@ -115,7 +121,8 @@
           "0.63 is located in the Penbryn 5 building on Penglais campus. You will find this building at the top of the hill beyond Penbryn TaMed Da and across the road from the Parry Williams TFTS building",
           "1.61 is located in the Penbryn 5 building on Penglais campus. You will find this building at the top of the hill beyond Penbryn TaMed Da and across the road from the Parry Williams TFTS building",
           "1.62 is located in the Penbryn 5 building on Penglais campus. You will find this building at the top of the hill beyond Penbryn TaMed Da and across the road from the Parry Williams TFTS building",
-          "1.64 is located in the Penbryn 5 building on Penglais campus. You will find this building at the top of the hill beyond Penbryn TaMed Da and across the road from the Parry Williams TFTS Building"]
+          "1.64 is located in the Penbryn 5 building on Penglais campus. You will find this building at the top of the hill beyond Penbryn TaMed Da and across the road from the Parry Williams TFTS Building"],
+        "imageSource": ["0.62"]
     },
     
     {
@@ -131,7 +138,8 @@
           "0.15 is located on the ground floor of the Physical Sciences building on Penglais campus",
           "Physics 1.49 is located on the first floor of the Physical Sciences building on Penglais campus",
           "3.02 is located on the third floor of the Physical Sciences building on Penglais campus",
-          "3.05 is located on the third floor of the Physical Sciences building on Penglais campus"]
+          "3.05 is located on the third floor of the Physical Sciences building on Penglais campus"],
+        "imageSource": ["0.10"]
     },
 
     {
@@ -144,7 +152,8 @@
         "teachingRooms": ["0.03", "0.06", "B1.07"],
         "roomDescription": ["0.03 is located on the ground floor of the Visualisation Building", 
           "0.06 is located on the ground floor of the Visualisation Building",
-          "B1.07 is located in the basement of the Visualisation Building"]
+          "B1.07 is located in the basement of the Visualisation Building"],
+        "imageSource": ["0.03"]
     }
 
     

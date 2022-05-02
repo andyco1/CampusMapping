@@ -12,6 +12,7 @@ struct RoomData: Codable {
     var title: String?
     var teachingRooms: [String]
     var roomDescription: [String]
+    var imageSource: [String]
 
 //    init(id: Int, title: String?, teachingRooms: [String], roomDescription: [String]) {
 //        self.id = -1
