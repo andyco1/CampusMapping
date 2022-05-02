@@ -21,7 +21,6 @@ class RoomTableViewController: UITableViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Waypoint"
         
-        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         tableView.delegate = self
