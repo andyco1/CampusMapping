@@ -15,7 +15,7 @@ class RoomTableViewController: UITableViewController {
     
     var roomSelected: Int?
     
-    let rooms = RoomDataLoader().buildingData
+    let rooms = RoomDataLoader().roomData
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -30,7 +30,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         mapView.setRegion(coordinateRegion, animated: true)
         let waypoints = BuildingDataLoader().waypointData
         
-        
         for waypoint in waypoints {
             let annotation = MKPointAnnotation()
             
@@ -50,6 +49,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
         mapView.showsUserLocation = true
+        
     }
 
 }
@@ -65,6 +65,7 @@ public class MapNode: NSObject, MKAnnotation {
         self.title = title
         self.subtitle = subtitle
         self.label = label
+        
     }
 }
         

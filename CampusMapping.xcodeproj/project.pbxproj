@@ -76,8 +76,8 @@
 		813DA620282098B3003457F3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				81772E6E27EA1F15006450EE /* WaypointViewController.swift */,
 				819257D928031A2500D717D9 /* MapViewController.swift */,
+				81772E6E27EA1F15006450EE /* WaypointViewController.swift */,
 				813DA61B281FEB5A003457F3 /* DescriptionViewController.swift */,
 				81772E7227EA5AAB006450EE /* BuildingTableViewController.swift */,
 				813DA611281F4215003457F3 /* RoomTableViewController.swift */,

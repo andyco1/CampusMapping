@@ -9,7 +9,6 @@ import UIKit
 
 class DescriptionViewController: UIViewController {
     
-    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -20,7 +19,7 @@ class DescriptionViewController: UIViewController {
     
     var roomSelected: Int?
 
-    var roomDescriptions = RoomDataLoader().buildingData
+    var roomDescriptions = RoomDataLoader().roomData
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +29,6 @@ class DescriptionViewController: UIViewController {
         descriptionLabel.text = roomDescriptions[rowSelected!].roomDescription[roomSelected!]
         
         imageView.image = UIImage(named: roomDescriptions[rowSelected!].imageSource[roomSelected!])
-
-        // Do any additional setup after loading the view.
     }
 
 }

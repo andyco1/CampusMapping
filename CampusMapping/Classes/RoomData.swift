@@ -13,11 +13,5 @@ struct RoomData: Codable {
     var teachingRooms: [String]
     var roomDescription: [String]
     var imageSource: [String]
-
-//    init(id: Int, title: String?, teachingRooms: [String], roomDescription: [String]) {
-//        self.id = -1
-//        self.title = "placeholder"
-//        self.teachingRooms = []
-//        self.roomDescription = []
-//    }
+    
 }
