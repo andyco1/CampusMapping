@@ -11,7 +11,7 @@ class BuildingViewController: UIViewController {
     
     var rowSelected: Int?
     
-    let buildings = BuildingDataLoader().buildingData
+    let buildings = RoomDataLoader().buildingData
     
     @IBOutlet weak var titleLabel: UILabel!
     

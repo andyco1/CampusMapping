@@ -1,0 +1,84 @@
+
+[
+    
+    { 
+      "id": 0,
+      "title": "Cledwyn Building",
+      "subtitle": "Aberystwyth University Cledwyn Building",
+      "label": "Cledwyn",
+      "latitude": 52.41710,      
+      "longitude": -4.06732,
+      "teachingRooms": ["0.21", "0.25", ".28"],
+      "roomDescription": ["0.21 is located on the ground floor of Cledwyn building", 
+      "0.25 is a Virtual Meetings Room in the Cledwyn building",
+      "0.28 is in the Cledwyn building on Penglais campus.‌ You will find this building next door to IBERS and across the road from the Student Welcome Centre"]
+    },
+    
+    {
+      "id": 1,
+      "title": "Edward Llwyd Building",
+      "subtitle": "Aberystwyth University Edward Llwyd Building",
+      "label": "Edward Llywd",
+      "latitude": 52.41564,
+      "longitude": -4.06644,
+      "teachingRooms": ["0.01", "0.26", "1.16", "3.34"],
+      "roomDescription": ["0.01 is located on the lower ground floor of the Edward Llwyd building on Penglais campus",
+      "0.26 is located on the lower ground floor of the Edward Llwyd building on Penglais campus", 
+      "1.16 is located on the ground floor of the Edward Llwyd building on Penglais campus",
+      "3.34 is located on the top floor of the Edward Llwyd building on Penglais campus"]
+    },
+    
+    {
+      "id": 2,
+      "title": "Hugh Owen Building",
+      "subtitle": "Aberystwyth University Hugh Owen Building",
+      "label": "Hugh Owen",
+      "latitude": 52.41675,
+      "longitude": -4.06435,
+      "teachingRooms": ["A9", "A12", "A14", "B21a"],
+      "roomDescription": ["A9 is located on Level A at the north end of the Hugh Owen building on Penglais campus. This room is near the university's main entrance and across the road from Penbryn TaMed Da",
+      "A12 is located on Level A of the Hugh Owen building extension on Penglais campus, near to the university's main entrance and across from Penbryn TaMed Da", 
+      "A14 is located on Level A of the Hugh Owen building extension on Penglais campus, near to the university's main entrance and across from Penbryn TaMed Da",
+      "B21a is located on Level B at the centre of the Hugh Owen building on Penglais campus"]
+    },
+    
+    {
+      "id": 3,
+      "title": "IBERS Building",
+      "subtitle": "Aberystwyth University IBERS Building",
+      "label": "IBERS",
+      "latitude": 52.41632,
+      "longitude": -4.06682,
+      "teachingRooms": ["0.30", "0.31", "0.32", "1.31", "1.32", "1.35"], 
+      "roomDescription": ["IBERS 0.30 is located on the ground floor of the IBERS building on Penglais campus",
+      "IBERS 0.31 is located on the ground floor of the IBERS building on Penglais campus", 
+      "0.32 is located on the ground floor of the IBERS building on Penglais campus",
+      "IBERS 1.31 is located on the first floor of the IBERS building on Penglais campus",
+      "IBERS 1.32 is located on the first floor of the IBERS building on Penglais campus",
+      "IBERS 1.35 is located on the first floor of the IBERS building on Penglais campus"]
+    },
+    
+    {
+      "id": 4,
+      "title": "International Politics Building",
+      "subtitle": "Aberystwyth University Internation Politics Building",
+      "label": "InterPol",
+      "latitude": 52.41517,
+      "longitude": -4.06397,
+      "teachingRooms": ["Seminar Room 1"],
+      "roomDescription": ["The International Politics Seminar Room 1 is located on Level 0 of the International Politics building on Penglais campus. You will find this building near to the pedestrian crossing on the road at the front of Aberystwyth Arts Centre"]
+    },
+
+    {
+      "id": 5,
+      "title": "Llandinam Building",
+      "subtitle": "Department of Computer Science",
+      "label": "Llandinam",
+      "latitude": 52.41627,
+      "longitude": -4.06548,
+      "teachingRooms": ["A6", "B20"],
+      "roomDescription": ["A6 is located on the basement level of the Llandinam tower on Penglais Campus",
+      "B20 is located on the ground floor of the Llandinam building on Penglais Campus"]
+    }
+    
+]

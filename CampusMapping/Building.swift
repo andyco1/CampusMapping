@@ -8,7 +8,7 @@
 import Foundation
 import MapKit
 
-struct Waypoint: Codable {
+struct Building: Codable {
     // NSObject, Decodable, Identifiable, MKAnnotation
     var id: Int
     var title: String?

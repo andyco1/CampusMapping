@@ -28,7 +28,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             latitudinalMeters: regionSpan,
             longitudinalMeters: regionSpan)
         mapView.setRegion(coordinateRegion, animated: true)
-        let waypoints = WaypointDataLoader().waypointData
+        let waypoints = BuildingDataLoader().waypointData
         
         
         for waypoint in waypoints {

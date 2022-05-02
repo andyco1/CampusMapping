@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BuildingData: Codable {
+struct RoomData: Codable {
     var id: Int
     var title: String?
     var teachingRooms: [String]

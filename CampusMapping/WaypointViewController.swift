@@ -15,7 +15,7 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
     
     var rowSelected: Int?
 
-    let waypoints = WaypointDataLoader().waypointData
+    let waypoints = BuildingDataLoader().waypointData
     
     private var targetNode = MapNode(latitude: 52.416278, longitude: -4.065484, title: "Computer Science Building",
                                      subtitle: "Department of Computer Science", label: "Comp Sci")

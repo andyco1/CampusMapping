@@ -11,16 +11,17 @@ class BuildingTableViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet weak var img: UIImageView! 
+    
     var rowSelected : Int?
     
-    let waypoints = WaypointDataLoader().waypointData
+    let waypoints = BuildingDataLoader().waypointData
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Waypoint"
         
-        
+
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         tableView.delegate = self

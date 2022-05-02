@@ -1,30 +1,37 @@
 //
-//  BuildingDataLoader.swift
+//  DataLoader.swift
 //  CampusMapping
 //
-//  Created by Andy Connor on 29/04/2022.
+//  Created by Andy Connor on 24/04/2022.
 //
 
 import Foundation
 
 public class BuildingDataLoader {
-    var buildingData = [BuildingData]()
+    var waypointData = [Building]()
     
     init() {
         load()
+        sort()
     }
     
     func load() {
-       if let filePath = Bundle.main.url(forResource: "buildings", withExtension: "json") {
+        if let filePath = Bundle.main.url(forResource: "buildingData", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: filePath)
                 let jsonDecoder = JSONDecoder()
-                let dataFromJson = try jsonDecoder.decode([BuildingData].self, from: data)
+                let dataFromJson = try jsonDecoder.decode([Building].self, from: data)
                 
-                self.buildingData = dataFromJson
+                self.waypointData = dataFromJson
             } catch {
                 print(error)
             }
         }
+    }
+    
+    func sort() {
+        self.waypointData = self.waypointData.sorted(by: { $0.id < $1.id }) // Sort waypoint data by ID in ascending order to allow selected row to be called by functions
+        
+//        self.waypointData = self.waypointData.sorted(by: { $0.title! < $1.title! })
     }
 }

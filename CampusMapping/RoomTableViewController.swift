@@ -13,7 +13,7 @@ class RoomTableViewController: UITableViewController {
     
     var rowSelected : Int?
     
-    let rooms = BuildingDataLoader().buildingData
+    let rooms = RoomDataLoader().buildingData
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +26,8 @@ class RoomTableViewController: UITableViewController {
         tableView.dataSource = self
     }
     
+    // Pulls number of rows to be displayed by calling the .count of the teachingRooms within the rows array
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Pulls number of rows to be displayed from the models array
         return rooms[rowSelected!].teachingRooms.count
     }
     
