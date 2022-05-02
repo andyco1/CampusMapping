@@ -8,7 +8,7 @@
 import Foundation
 
 public class RoomDataLoader {
-    var buildingData = [RoomData]()
+    var roomData = [RoomData]()
     
     init() {
         load()
@@ -21,7 +21,7 @@ public class RoomDataLoader {
                 let jsonDecoder = JSONDecoder()
                 let dataFromJson = try jsonDecoder.decode([RoomData].self, from: data)
                 
-                self.buildingData = dataFromJson
+                self.roomData = dataFromJson
             } catch {
                 print(error)
             }
