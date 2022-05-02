@@ -10,8 +10,8 @@
       "longitude": -4.06732,
       "teachingRooms": ["0.21", "0.25", ".28"],
       "roomDescription": ["0.21 is located on the ground floor of Cledwyn building", 
-      "0.25 is a Virtual Meetings Room in the Cledwyn building",
-      "0.28 is in the Cledwyn building on Penglais campus.‌ You will find this building next door to IBERS and across the road from the Student Welcome Centre"]
+        "0.25 is a Virtual Meetings Room in the Cledwyn building",
+        "0.28 is in the Cledwyn building on Penglais campus.‌ You will find this building next door to IBERS and across the road from the Student Welcome Centre"]
     },
     
     {
@@ -23,9 +23,9 @@
       "longitude": -4.06644,
       "teachingRooms": ["0.01", "0.26", "1.16", "3.34"],
       "roomDescription": ["0.01 is located on the lower ground floor of the Edward Llwyd building on Penglais campus",
-      "0.26 is located on the lower ground floor of the Edward Llwyd building on Penglais campus", 
-      "1.16 is located on the ground floor of the Edward Llwyd building on Penglais campus",
-      "3.34 is located on the top floor of the Edward Llwyd building on Penglais campus"]
+        "0.26 is located on the lower ground floor of the Edward Llwyd building on Penglais campus", 
+        "1.16 is located on the ground floor of the Edward Llwyd building on Penglais campus",
+        "3.34 is located on the top floor of the Edward Llwyd building on Penglais campus"]
     },
     
     {
@@ -35,11 +35,23 @@
       "label": "Hugh Owen",
       "latitude": 52.41675,
       "longitude": -4.06435,
-      "teachingRooms": ["A9", "A12", "A14", "B21a"],
+      "teachingRooms": ["A9", "A12", "A14", "B21a", "B21b", "C4", "C6", "C22", "C43", "C48", "C64", "C65", "C66", "D5", "D54", "D59"],
       "roomDescription": ["A9 is located on Level A at the north end of the Hugh Owen building on Penglais campus. This room is near the university's main entrance and across the road from Penbryn TaMed Da",
-      "A12 is located on Level A of the Hugh Owen building extension on Penglais campus, near to the university's main entrance and across from Penbryn TaMed Da", 
-      "A14 is located on Level A of the Hugh Owen building extension on Penglais campus, near to the university's main entrance and across from Penbryn TaMed Da",
-      "B21a is located on Level B at the centre of the Hugh Owen building on Penglais campus"]
+        "A12 is located on Level A of the Hugh Owen building extension on Penglais campus, near to the university's main entrance and across from Penbryn TaMed Da", 
+        "A14 is located on Level A of the Hugh Owen building extension on Penglais campus, near to the university's main entrance and across from Penbryn TaMed Da",
+        "B21a is located on Level B at the centre of the Hugh Owen building on Penglais campus",
+        "B21b is located on Level B at the centre of the Hugh Owen building on Penglais campus",
+        "C4 is located on Level C of the Hugh Owen building on Penglais campus next to Hugh Owen library",
+        "C6 is located on Level C of the Hugh Owen building on Penglais campus next to Hugh Owen library",
+        "C22 is located on Level C at the south end of the Hugh Owen building on Penglais campus",
+        "C43 is located on Level C of the Hugh Owen building on Penglais campus‌",
+        "C48 is located on Level C of the Hugh Owen building on Penglais campus next to Hugh Owen library",
+        "C64 is located on Level C of the Hugh Owen building extension on Penglais campus, near to the university's main entrance and across the road from Penbryn TaMed Da",
+        "C65 is located on Level C of the Hugh Owen building extension, near to the university's main entrance and across the road from Penbryn TaMed Da",
+        "C66 is located in the Hugh Owen building extension on Penglais campus, near to the university's main entrance and across from Penbryn TaMed Da",
+        "D5 is located on Level D of the Hugh Owen building on Penglais campus next to Hugh Owen library",
+        "D54 is located on Level D of the Hugh Owen building on Penglais campus next to Hugh Owen library",
+        "D59 is located on Level D of the Hugh Owen building on Penglais campus next to Hugh Owen library"]
     },
     
     {
@@ -51,17 +63,17 @@
       "longitude": -4.06682,
       "teachingRooms": ["0.30", "0.31", "0.32", "1.31", "1.32", "1.35"], 
       "roomDescription": ["IBERS 0.30 is located on the ground floor of the IBERS building on Penglais campus",
-      "IBERS 0.31 is located on the ground floor of the IBERS building on Penglais campus", 
-      "0.32 is located on the ground floor of the IBERS building on Penglais campus",
-      "IBERS 1.31 is located on the first floor of the IBERS building on Penglais campus",
-      "IBERS 1.32 is located on the first floor of the IBERS building on Penglais campus",
-      "IBERS 1.35 is located on the first floor of the IBERS building on Penglais campus"]
+        "IBERS 0.31 is located on the ground floor of the IBERS building on Penglais campus", 
+        "0.32 is located on the ground floor of the IBERS building on Penglais campus",
+        "IBERS 1.31 is located on the first floor of the IBERS building on Penglais campus",
+        "IBERS 1.32 is located on the first floor of the IBERS building on Penglais campus",
+        "IBERS 1.35 is located on the first floor of the IBERS building on Penglais campus"]
     },
     
     {
       "id": 4,
       "title": "International Politics Building",
-      "subtitle": "Aberystwyth University Internation Politics Building",
+      "subtitle": "Aberystwyth University International Politics Building",
       "label": "InterPol",
       "latitude": 52.41517,
       "longitude": -4.06397,
@@ -74,11 +86,66 @@
       "title": "Llandinam Building",
       "subtitle": "Department of Computer Science",
       "label": "Llandinam",
-      "latitude": 52.41627,
-      "longitude": -4.06548,
-      "teachingRooms": ["A6", "B20"],
+      "latitude": 52.41646,
+      "longitude": -4.06559,
+      "teachingRooms": ["A6", "B20", "B22", "B23", "C26", "C40", "C63", "C64", "C65", "G3", "G3a", "Think Tank"],
       "roomDescription": ["A6 is located on the basement level of the Llandinam tower on Penglais Campus",
-      "B20 is located on the ground floor of the Llandinam building on Penglais Campus"]
+        "B20 is located on the ground floor of the Llandinam building on Penglais Campus",
+        "B22 is on the ground floor of the Llandinam building",
+        "B23 is located on the ground floor of the Llandinam building",
+        "C26 is on the first floor of the Llandinam building",
+        "C40 is on the first floor of the Llandinam building",
+        "C63 is on the first floor of the Llandinam building",
+        "C64 is on the first floor of the Llandinam building",
+        "C65 is on the first floor of the Llandinam building",
+        "G3 is located on the fifth floor of the Llandinam tower on Penglais campus",
+        "G3a is located on the fifth floor of the Llandinam tower on Penglais campus",
+        "The Think Tank is located on the ground floor of the Llandinam building"]
+    },
+
+    {
+        "id": 6,
+        "title": "Penbryn 5 Building",
+        "subtitle": "Aberystwyth University Penbryn 5 Building",
+        "label": "Penbryn 5",
+        "latitude": 52.41769,
+        "longitude": -4.06359,
+        "teachingRooms": ["0.62", "0.63", "1.61", "1.62", "1.64"],
+        "roomDescription": ["0.62 is located in the Penbryn 5 building on Penglais campus. You will find this building at the top of the hill beyond Penbryn TaMed Da and across the road from the Parry Williams TFTS building",
+          "0.63 is located in the Penbryn 5 building on Penglais campus. You will find this building at the top of the hill beyond Penbryn TaMed Da and across the road from the Parry Williams TFTS building",
+          "1.61 is located in the Penbryn 5 building on Penglais campus. You will find this building at the top of the hill beyond Penbryn TaMed Da and across the road from the Parry Williams TFTS building",
+          "1.62 is located in the Penbryn 5 building on Penglais campus. You will find this building at the top of the hill beyond Penbryn TaMed Da and across the road from the Parry Williams TFTS building",
+          "1.64 is located in the Penbryn 5 building on Penglais campus. You will find this building at the top of the hill beyond Penbryn TaMed Da and across the road from the Parry Williams TFTS Building"]
+    },
+    
+    {
+        "id": 7,
+        "title": "Physical Sciences Building",
+        "subtitle": "Aberystwyth University Physical Sciences Building",
+        "label": "Physical Sciences",
+        "latitude": 52.41600,
+        "longitude": -4.06534,
+        "teachingRooms": ["0.10", "0.11", "0.15", "1.49", "3.02", "3.05"],
+        "roomDescription": ["0.10 is located on the ground floor of the Physical Sciences building on Penglais campus",
+          "0.11 is located on the ground floor of the Physical Sciences building on Penglais campus",
+          "0.15 is located on the ground floor of the Physical Sciences building on Penglais campus",
+          "Physics 1.49 is located on the first floor of the Physical Sciences building on Penglais campus",
+          "3.02 is located on the third floor of the Physical Sciences building on Penglais campus",
+          "3.05 is located on the third floor of the Physical Sciences building on Penglais campus"]
+    },
+
+    {
+        "id": 8,
+        "title": "Visualisation Centre Building",
+        "subtitle": "Aberystwyth University Visualisation Centre Building",
+        "label": "Visualisation Centre",
+        "latitude": 52.41749,
+        "longitude": -4.06746,
+        "teachingRooms": ["0.03", "0.06", "B1.07"],
+        "roomDescription": ["0.03 is located on the ground floor of the Visualisation Building", 
+          "0.06 is located on the ground floor of the Visualisation Building",
+          "B1.07 is located in the basement of the Visualisation Building"]
     }
+
     
 ]
