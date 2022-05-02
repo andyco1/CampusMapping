@@ -17,6 +17,7 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
 
     let waypoints = BuildingDataLoader().waypointData
     
+    // Mock data to initialise the variable
     private var targetNode = MapNode(latitude: 52.416278, longitude: -4.065484, title: "Computer Science Building",
                                      subtitle: "Department of Computer Science", label: "Comp Sci")
     
@@ -32,7 +33,7 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
         // Sets a coordinate region with the targetNode as the centre and a 500m span.
         let regionSpan: CLLocationDistance = 500
         let coordinateRegion = MKCoordinateRegion(
-            center: targetNode.coordinate,
+            center: CLLocationCoordinate2D(latitude: 52.41610, longitude: -4.06454),
             latitudinalMeters: regionSpan,
             longitudinalMeters: regionSpan)
         mapView.setRegion(coordinateRegion, animated: true)
