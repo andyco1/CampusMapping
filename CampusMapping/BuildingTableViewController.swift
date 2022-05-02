@@ -11,8 +11,6 @@ class BuildingTableViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet var tableView: UITableView!
     
-    @IBOutlet weak var img: UIImageView! 
-    
     var rowSelected : Int?
     
     let waypoints = BuildingDataLoader().waypointData

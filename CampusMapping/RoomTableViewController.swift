@@ -11,7 +11,9 @@ class RoomTableViewController: UITableViewController {
     
     @IBOutlet var roomTableView: UITableView!
     
-    var rowSelected : Int?
+    var rowSelected: Int?
+    
+    var roomSelected: Int?
     
     let rooms = RoomDataLoader().buildingData
 
@@ -37,19 +39,20 @@ class RoomTableViewController: UITableViewController {
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        // Performs the segue to MapViewController when the user selects a row
-//        rowSelected = indexPath.row
-//        performSegue(withIdentifier: "tableReturn", sender: self)
-//    }
-//    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Allows index of selected row passed to WaypointViewController
-//        if segue.identifier == "tableReturn" {
-//            if let waypointVC = segue.destination as? WaypointViewController {
-//            waypointVC.rowSelected = rowSelected!
-//            }
-//        }
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Performs the segue to MapViewController when the user selects a row
+        roomSelected = indexPath.row
+        performSegue(withIdentifier: "pushDescriptionView", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Allows index of selected row passed to WaypointViewController
+        if segue.identifier == "pushDescriptionView" {
+            if let waypointVC = segue.destination as? DescriptionViewController {
+            waypointVC.rowSelected = rowSelected!
+            waypointVC.roomSelected = roomSelected
+            }
+        }
+    }
 }
 
