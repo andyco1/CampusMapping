@@ -13,7 +13,7 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     
-    var rowSelected: Int?
+    var buildingSelected: Int?
 
     let waypoints = BuildingDataLoader().waypointData
     
@@ -52,11 +52,11 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func waypointSelection() {
-        targetNode.coordinate.latitude = waypoints[rowSelected!].latitude
-        targetNode.coordinate.longitude = waypoints[rowSelected!].longitude
-        targetNode.title = waypoints[rowSelected!].title
-        targetNode.subtitle = waypoints[rowSelected!].subtitle
-        targetNode.label = waypoints[rowSelected!].label
+        targetNode.coordinate.latitude = waypoints[buildingSelected!].latitude
+        targetNode.coordinate.longitude = waypoints[buildingSelected!].longitude
+        targetNode.title = waypoints[buildingSelected!].title
+        targetNode.subtitle = waypoints[buildingSelected!].subtitle
+        targetNode.label = waypoints[buildingSelected!].label
         mapView.addAnnotation(targetNode)
     }
     
@@ -65,7 +65,7 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
         // Allows index of targetNode to be passed to BuildingViewController
         if segue.identifier == "regionPushView" {
             if let destVC = segue.destination as? RoomTableViewController {
-                destVC.rowSelected = rowSelected!
+                destVC.buildingSelected = buildingSelected!
             }
         }
     }

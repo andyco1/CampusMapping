@@ -15,7 +15,7 @@ class DescriptionViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    var rowSelected: Int?
+    var buildingSelected: Int?
     
     var roomSelected: Int?
 
@@ -24,11 +24,11 @@ class DescriptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleLabel.text = roomDescriptions[rowSelected!].teachingRooms[roomSelected!]
+        titleLabel.text = roomDescriptions[buildingSelected!].teachingRooms[roomSelected!]
         
-        descriptionLabel.text = roomDescriptions[rowSelected!].roomDescription[roomSelected!]
+        descriptionLabel.text = roomDescriptions[buildingSelected!].roomDescription[roomSelected!]
         
-        imageView.image = UIImage(named: roomDescriptions[rowSelected!].imageSource[roomSelected!])
+        imageView.image = UIImage(named: roomDescriptions[buildingSelected!].imageSource[roomSelected!])
     }
 
 }

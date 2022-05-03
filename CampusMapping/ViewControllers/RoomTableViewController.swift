@@ -11,7 +11,7 @@ class RoomTableViewController: UITableViewController {
     
     @IBOutlet var roomTableView: UITableView!
     
-    var rowSelected: Int?
+    var buildingSelected: Int?
     
     var roomSelected: Int?
     
@@ -29,12 +29,12 @@ class RoomTableViewController: UITableViewController {
     
     // Pulls number of rows to be displayed by calling the .count of the teachingRooms within the rows array
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rooms[rowSelected!].teachingRooms.count
+        return rooms[buildingSelected!].teachingRooms.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = rooms[rowSelected!].teachingRooms[indexPath.row]
+        cell.textLabel?.text = rooms[buildingSelected!].teachingRooms[indexPath.row]
         return cell
     }
     
@@ -48,7 +48,7 @@ class RoomTableViewController: UITableViewController {
         // Allows index of selected row passed to WaypointViewController
         if segue.identifier == "pushDescriptionView" {
             if let waypointVC = segue.destination as? DescriptionViewController {
-            waypointVC.rowSelected = rowSelected!
+            waypointVC.buildingSelected = buildingSelected!
             waypointVC.roomSelected = roomSelected
             }
         }

@@ -11,7 +11,7 @@ class BuildingTableViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet var tableView: UITableView!
     
-    var rowSelected : Int?
+    var buildingSelected : Int?
     
     let waypoints = BuildingDataLoader().waypointData
     
@@ -43,7 +43,7 @@ extension BuildingTableViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Performs the segue to MapViewController when the user selects a row
-        rowSelected = indexPath.row
+        buildingSelected = indexPath.row
         performSegue(withIdentifier: "tableReturn", sender: self)
     }
     
@@ -51,7 +51,7 @@ extension BuildingTableViewController: UITableViewDataSource {
         // Allows index of selected row passed to WaypointViewController
         if segue.identifier == "tableReturn" {
             if let waypointVC = segue.destination as? WaypointViewController {
-            waypointVC.rowSelected = rowSelected!
+            waypointVC.buildingSelected = buildingSelected!
             }
         }
     }
