@@ -8,14 +8,16 @@
 import Foundation
 
 public class BuildingDataLoader {
-    var waypointData = [Building]()
+    // Made the class and relevant methods public so that it can be accessed by testing methods
     
-    init() {
+    public var waypointData = [Building]()
+    
+    public init() {
         load()
         sort()
     }
     
-    func load() {
+    public func load() {
         if let filePath = Bundle.main.url(forResource: "buildingData", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: filePath)

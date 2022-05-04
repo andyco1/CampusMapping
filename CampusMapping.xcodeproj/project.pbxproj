@@ -10,6 +10,7 @@
 		813DA612281F4215003457F3 /* RoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DA611281F4215003457F3 /* RoomTableViewController.swift */; };
 		813DA61A281FCE99003457F3 /* buildingData.json in Resources */ = {isa = PBXBuildFile; fileRef = 813DA619281FCE99003457F3 /* buildingData.json */; };
 		813DA61C281FEB5A003457F3 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DA61B281FEB5A003457F3 /* DescriptionViewController.swift */; };
+		813DA629282245C4003457F3 /* CampusMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DA628282245C4003457F3 /* CampusMappingTests.swift */; };
 		81772E6F27EA1F15006450EE /* WaypointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81772E6E27EA1F15006450EE /* WaypointViewController.swift */; };
 		81772E7327EA5AAB006450EE /* BuildingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81772E7227EA5AAB006450EE /* BuildingTableViewController.swift */; };
 		819257DA28031A2500D717D9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819257D928031A2500D717D9 /* MapViewController.swift */; };
@@ -24,10 +25,22 @@
 		81A4D00127DBAE1D00E5E0D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A4CFFF27DBAE1D00E5E0D6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		813DA62A282245C4003457F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81A4CFE927DBAE1C00E5E0D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81A4CFF027DBAE1C00E5E0D6;
+			remoteInfo = CampusMapping;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		813DA611281F4215003457F3 /* RoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewController.swift; sourceTree = "<group>"; };
 		813DA619281FCE99003457F3 /* buildingData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buildingData.json; sourceTree = "<group>"; };
 		813DA61B281FEB5A003457F3 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		813DA626282245C4003457F3 /* CampusMappingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusMappingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		813DA628282245C4003457F3 /* CampusMappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusMappingTests.swift; sourceTree = "<group>"; };
 		81772E6E27EA1F15006450EE /* WaypointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointViewController.swift; sourceTree = "<group>"; };
 		81772E7227EA5AAB006450EE /* BuildingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingTableViewController.swift; sourceTree = "<group>"; };
 		819257D928031A2500D717D9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +58,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		813DA623282245C4003457F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81A4CFEE27DBAE1C00E5E0D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,10 +105,19 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		813DA627282245C4003457F3 /* CampusMappingTests */ = {
+			isa = PBXGroup;
+			children = (
+				813DA628282245C4003457F3 /* CampusMappingTests.swift */,
+			);
+			path = CampusMappingTests;
+			sourceTree = "<group>";
+		};
 		81A4CFE827DBAE1C00E5E0D6 = {
 			isa = PBXGroup;
 			children = (
 				81A4CFF327DBAE1C00E5E0D6 /* CampusMapping */,
+				813DA627282245C4003457F3 /* CampusMappingTests */,
 				81A4CFF227DBAE1C00E5E0D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				81A4CFF127DBAE1C00E5E0D6 /* CampusMapping.app */,
+				813DA626282245C4003457F3 /* CampusMappingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +151,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		813DA625282245C4003457F3 /* CampusMappingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 813DA62C282245C4003457F3 /* Build configuration list for PBXNativeTarget "CampusMappingTests" */;
+			buildPhases = (
+				813DA622282245C4003457F3 /* Sources */,
+				813DA623282245C4003457F3 /* Frameworks */,
+				813DA624282245C4003457F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				813DA62B282245C4003457F3 /* PBXTargetDependency */,
+			);
+			name = CampusMappingTests;
+			productName = CampusMappingTests;
+			productReference = 813DA626282245C4003457F3 /* CampusMappingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		81A4CFF027DBAE1C00E5E0D6 /* CampusMapping */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81A4D00527DBAE1D00E5E0D6 /* Build configuration list for PBXNativeTarget "CampusMapping" */;
@@ -148,6 +196,10 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					813DA625282245C4003457F3 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 81A4CFF027DBAE1C00E5E0D6;
+					};
 					81A4CFF027DBAE1C00E5E0D6 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -167,11 +219,19 @@
 			projectRoot = "";
 			targets = (
 				81A4CFF027DBAE1C00E5E0D6 /* CampusMapping */,
+				813DA625282245C4003457F3 /* CampusMappingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		813DA624282245C4003457F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81A4CFEF27DBAE1C00E5E0D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,6 +246,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		813DA622282245C4003457F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				813DA629282245C4003457F3 /* CampusMappingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81A4CFED27DBAE1C00E5E0D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,6 +273,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		813DA62B282245C4003457F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81A4CFF027DBAE1C00E5E0D6 /* CampusMapping */;
+			targetProxy = 813DA62A282245C4003457F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		81A4CFFA27DBAE1C00E5E0D6 /* Main.storyboard */ = {
@@ -226,6 +302,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		813DA62D282245C4003457F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HPRUM653FY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = arc29.CampusMappingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CampusMapping.app/CampusMapping";
+			};
+			name = Debug;
+		};
+		813DA62E282245C4003457F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HPRUM653FY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = arc29.CampusMappingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CampusMapping.app/CampusMapping";
+			};
+			name = Release;
+		};
 		81A4D00327DBAE1D00E5E0D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -401,6 +513,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		813DA62C282245C4003457F3 /* Build configuration list for PBXNativeTarget "CampusMappingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				813DA62D282245C4003457F3 /* Debug */,
+				813DA62E282245C4003457F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		81A4CFEC27DBAE1C00E5E0D6 /* Build configuration list for PBXProject "CampusMapping" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

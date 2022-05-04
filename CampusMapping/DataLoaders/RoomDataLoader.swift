@@ -8,13 +8,15 @@
 import Foundation
 
 public class RoomDataLoader {
-    var roomData = [RoomData]()
+    // Made the class and relevant methods public so that it can be accessed by testing methods
     
-    init() {
+    public var roomData = [RoomData]()
+    
+    public init() {
         load()
     }
     
-    func load() {
+    public func load() {
        if let filePath = Bundle.main.url(forResource: "buildingData", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: filePath)

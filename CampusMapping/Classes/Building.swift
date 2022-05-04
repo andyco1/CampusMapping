@@ -8,16 +8,16 @@
 import Foundation
 import MapKit
 
-struct Building: Codable {
-    // NSObject, Decodable, Identifiable, MKAnnotation
-    var id: Int
-    var title: String?
-    var subtitle: String?
-    var label: String?
-    var latitude: Double
-    var longitude: Double
+public struct Building: Codable {
+    // Made the struct and variables public so that it can be accessed by testing methods
+    public var id: Int
+    public var title: String?
+    public var subtitle: String?
+    public var label: String?
+    public var latitude: Double
+    public var longitude: Double
     
-    var coordinate: CLLocationCoordinate2D {
+    public var coordinate: CLLocationCoordinate2D {
         .init(latitude: latitude, longitude: longitude)
     }
 }
