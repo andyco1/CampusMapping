@@ -24,7 +24,7 @@ class CampusMappingTests: XCTestCase {
         let roomData = RoomDataLoader().roomData
         
         // Check that the buildingJSON file that the application uses exists
-        guard let url = Bundle.main.url(forResource: "buildingData", withExtension: "json") else {
+        guard Bundle.main.url(forResource: "buildingData", withExtension: "json") != nil else {
             XCTFail("Missing JSON file: buildingData.json")
             return
         }
@@ -42,6 +42,7 @@ class CampusMappingTests: XCTestCase {
         XCTAssertEqual(roomData[0].teachingRooms[0], "0.21")
         XCTAssertEqual(roomData[0].roomDescription[0], "0.21 is located on the ground floor of Cledwyn building")
         XCTAssertEqual(roomData[0].imageSource[0], "0.21")
+        
     }
 
 }
