@@ -78,7 +78,6 @@ class WaypointViewController: UIViewController, CLLocationManagerDelegate {
         mapState.text = "Distance to \(targetNode.label!) is \(formatDistance)m"
         
         if distance < 50 {
-            print("User inside the radius of \(targetNode.label!)")
             self.performSegue(withIdentifier: "regionPushView", sender: self)
         }
     }

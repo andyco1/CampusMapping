@@ -54,11 +54,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
 }
 
-internal class MapNode: NSObject, MKAnnotation {
-    public var coordinate: CLLocationCoordinate2D
-    public var title: String?
-    public var subtitle: String?
-    public var label: String?
+class MapNode: NSObject, MKAnnotation {
+    var coordinate: CLLocationCoordinate2D
+    var title: String?
+    var subtitle: String?
+    var label: String?
 
     init(latitude: CLLocationDegrees, longitude: CLLocationDegrees, title: String, subtitle: String, label: String) {
         coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)

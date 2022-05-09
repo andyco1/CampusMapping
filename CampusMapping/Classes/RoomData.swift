@@ -7,9 +7,9 @@
 
 import Foundation
 
-public struct RoomData: Codable {
+struct RoomData: Codable {
     // Made the struct and variables public so that it can be accessed by testing methods
-    public var teachingRooms: [String]
-    public var roomDescription: [String]
-    public var imageSource: [String]
+    var teachingRooms: [String]
+    var roomDescription: [String]
+    var imageSource: [String]
 }
