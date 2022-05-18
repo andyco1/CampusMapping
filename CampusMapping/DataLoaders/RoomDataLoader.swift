@@ -10,7 +10,7 @@ import Foundation
 class RoomDataLoader {
     // Made the class and relevant methods public so that it can be accessed by testing methods
     
-    var roomData = [RoomData]()
+    var roomData = [Room]()
     
     init() {
         load()
@@ -21,7 +21,7 @@ class RoomDataLoader {
             do {
                 let data = try Data(contentsOf: filePath)
                 let jsonDecoder = JSONDecoder()
-                let dataFromJson = try jsonDecoder.decode([RoomData].self, from: data)
+                let dataFromJson = try jsonDecoder.decode([Room].self, from: data)
                 
                 self.roomData = dataFromJson
             } catch {
