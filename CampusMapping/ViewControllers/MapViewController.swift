@@ -13,6 +13,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     
+    let waypoints = BuildingDataLoader().waypointData
+    
     @IBOutlet weak var mapView: MKMapView!
     
     var startNode = MapNode(latitude: 52.416278, longitude: -4.065484, title: "Computer Science Building", subtitle: "Department of Computer Science", label: "Comp Sci")
@@ -28,7 +30,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             latitudinalMeters: regionSpan,
             longitudinalMeters: regionSpan)
         mapView.setRegion(coordinateRegion, animated: true)
-        let waypoints = BuildingDataLoader().waypointData
         
         for waypoint in waypoints {
             let annotation = MKPointAnnotation()
