@@ -17,7 +17,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    var startNode = MapNode(latitude: 52.416278, longitude: -4.065484, title: "Computer Science Building", subtitle: "Department of Computer Science", label: "Comp Sci")
+    let startNode = MapNode(latitude: 52.416278, longitude: -4.065484, title: "Computer Science Building", subtitle: "Department of Computer Science", label: "Comp Sci")
     
     var multipleAnnotations: [MKAnnotation] = []
     
