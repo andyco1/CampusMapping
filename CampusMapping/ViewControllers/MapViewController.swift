@@ -44,7 +44,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             
         }
         
-        locationManager.requestWhenInUseAuthorization()
+//        locationManager.requestWhenInUseAuthorization()
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.delegate = self
